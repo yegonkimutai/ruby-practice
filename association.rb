@@ -1,11 +1,15 @@
+require 'pry'
+
 class Owner
-    attr_accessor :name
     attr_reader :animals
+    attr_accessor :name
   
     def initialize(name)
       @name = name
       @animals = []
     end
+
+    binding.pry
   
     def add_animal(animal)
       @animals.push(animal)
@@ -39,3 +43,6 @@ class Owner
       vet.visits << self
     end
   end
+
+  puts owner_1 = Owner.new('George')
+  puts owner_1.name
