@@ -21,3 +21,23 @@ describe Owner do
         end
     end
 end
+
+describe Vet do
+    let(:name) {'Brian'}
+    let(:address) {'Nairobi'}
+    let(:vet) {Vet.new(name, address)}
+
+    context 'initialize' do
+       it 'sets name' do
+        expect(vet.name).to eq(name)
+       end
+
+       it 'sets address' do
+        expect(vet.address).to eq(address)
+       end
+
+       it 'sets empty visits array' do
+        expect(vet.visits).to be_empty
+       end
+    end
+end
