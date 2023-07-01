@@ -1,5 +1,3 @@
-require 'pry'
-
 class Owner
     attr_reader :animals
     attr_accessor :name
@@ -8,8 +6,6 @@ class Owner
       @name = name
       @animals = []
     end
-
-    binding.pry
   
     def add_animal(animal)
       @animals.push(animal)
