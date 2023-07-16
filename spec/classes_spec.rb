@@ -54,3 +54,23 @@ describe Dog do
         end
     end
 end
+
+describe Spider do
+    let (:name) {'Chupa'}
+    let (:web_strength_level) { 'strong' }
+    let(:spider) { Spider.new(web_strength_level, name)}
+
+    context 'initialize' do
+        it 'sets name' do
+            expect(spider.name).to eq(name)
+        end
+
+        it 'make web' do
+            expect(spider.make_a_web).to eq("www")
+        end
+
+        it 'speaks' do
+            expect(spider.speak).to eq("...")
+        end
+    end
+end
